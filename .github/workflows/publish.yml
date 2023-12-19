@@ -44,4 +44,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.TOKEN }}
+          repository-name: andrei-kochetygov/mui-solutions
+          branch: gh-pages
           folder: storybook-static
