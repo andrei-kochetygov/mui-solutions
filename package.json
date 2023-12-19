@@ -24,7 +24,6 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "stories:deploy": "gh-pages -d storybook-static",
     "stories:dev": "storybook dev -p 6006",
     "stories:build": "storybook build"
   },
@@ -59,7 +58,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "eslint-plugin-storybook": "^0.6.15",
-    "gh-pages": "^6.1.0",
     "rollup": "^2.79.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

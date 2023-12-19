@@ -41,4 +41,6 @@ jobs:
           package: './packages/inputs/package.json'
 
       - name: Deploy Stories to GitHub Pages
-        run: npm run stories:deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v2
+        with:
+          folder: storybook-static
