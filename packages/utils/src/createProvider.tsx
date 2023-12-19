@@ -1,19 +1,14 @@
-import { ReactNode, useMemo } from 'react';
+import { useMemo } from 'react';
 import { createProviderContext } from './createProviderContext';
 
-export type ProviderProps<Props> = Props & {
-  children?: ReactNode;
-};
-
-export type ComputeProvidableValueCallback<Props, ProvidableValue> = (props: Props) => ProvidableValue;
-
-export function createProvider<Props, ProvidableValue>(
-  name: string,
-  computeProvidableValue: ComputeProvidableValueCallback<Props, ProvidableValue>,
-) {
+export function createProvider<
+  ProvidableValue,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- we don't know what the props will be passed
+  ComputeProvidableValueCallback extends (props: any) => ProvidableValue,
+>(name: string, computeProvidableValue: ComputeProvidableValueCallback) {
   const [Context, useContext] = createProviderContext<ProvidableValue>(name);
 
-  const Provider = (props: ProviderProps<Props>) => {
+  const Provider = <Props extends Parameters<ComputeProvidableValueCallback>[0]>(props: Props) => {
     const providableValue = useMemo(() => computeProvidableValue(props), [props]);
 
     return <Context.Provider value={providableValue}>{props.children}</Context.Provider>;

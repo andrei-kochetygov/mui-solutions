@@ -1,6 +1,6 @@
 {
   "name": "mui-solutions",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Andrei Kochetygov",
   "license": "MIT",
   "keywords": [],
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@mui-solutions/inputs": "0.1.3",
-    "@mui-solutions/utils": "0.1.0"
+    "@mui-solutions/utils": "0.1.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.11.1",
