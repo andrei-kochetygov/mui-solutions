@@ -1,12 +1,12 @@
 {
   "name": "mui-solutions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Andrei Kochetygov",
   "license": "MIT",
   "keywords": [],
   "type": "module",
   "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.esm.d.ts",
   "files": [
     "dist"
   ],
