@@ -26,6 +26,13 @@ jobs:
       - name: Build Bundle
         run: npm run build
 
-      - uses: JS-DevTools/npm-publish@v3
+      - name: Publish "@mui-solutions" Bundle
+        uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish "@mui-solutions/inputs" Bundle
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          config: './packages/inputs/package.json'
