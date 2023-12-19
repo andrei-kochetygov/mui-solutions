@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Build Bundle
-        run: npm run build
+				run: npm run build
 
 			- uses: JS-DevTools/npm-publish@v3
         with:
