@@ -34,17 +34,17 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish "@mui-solutions/inputs" Bundle
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: './packages/inputs/package.json'
-
       - name: Publish "@mui-solutions/utils" Bundle
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: './packages/utils/package.json'
+
+      - name: Publish "@mui-solutions/fields" Bundle
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: './packages/fields/package.json'
 
       - name: Deploy Stories to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

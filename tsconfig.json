@@ -8,8 +8,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@mui-solutions/inputs": ["./packages/inputs/src"],
-      "@mui-solutions/inputs/*": ["./packages/inputs/src/*"],
+      "@mui-solutions/fields": ["./packages/fields/src"],
+      "@mui-solutions/fields/*": ["./packages/fields/src/*"],
       "@mui-solutions/utils": ["./packages/utils/src"],
       "@mui-solutions/utils/*": ["./packages/utils/src/*"]
     },

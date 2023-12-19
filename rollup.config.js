@@ -11,7 +11,7 @@ const currentWorkingDir = path.dirname(url.fileURLToPath(import.meta.url));
 
 const sources = {
   root: '.',
-  packages: ['inputs', 'utils'],
+  packages: ['utils', 'fields'],
 };
 
 const inputs = [...sources.packages.map((pkg) => `${sources.root}/packages/${pkg}`), sources.root];
@@ -29,7 +29,8 @@ export default inputs.map((input) => ({
     alias({
       resolve: ['.js', '.jsx', '.ts', '.tsx'],
       entries: {
-        '@mui-solutions/inputs': `${currentWorkingDir}/packages/inputs/src`,
+        '@mui-solutions/utils': `${currentWorkingDir}/packages/utils/src`,
+        '@mui-solutions/inputs': `${currentWorkingDir}/packages/fields/src`,
       },
     }),
     resolve(),

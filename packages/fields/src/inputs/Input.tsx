@@ -1,6 +1,6 @@
 import { InputLabel as MuiInputLabel, InputLabelProps, InputProps, FormControl, useFormControl } from '@mui/material';
 import { Fragment, ReactNode, useCallback, useMemo } from 'react';
-import { useMuiInput } from '@mui-solutions/inputs/providers';
+import { useMuiInput } from '@mui-solutions/fields/providers';
 
 export type BaseInputProps = InputProps & {
   label: ReactNode;
