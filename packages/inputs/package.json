@@ -1,6 +1,6 @@
 {
   "name": "@mui-solutions/inputs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Andrei Kochetygov",
   "license": "MIT",
   "keywords": [],
@@ -12,9 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/andrei-kochetygov/mui-solutions/tree/main/packages/inputs",
+    "url": "https://github.com/andrei-kochetygov/mui-solutions.git",
     "directory": "packages/inputs"
   },
+  "homepage": "http://andrei-kochetygov.github.io/mui-solutions",
   "publishConfig": {
     "access": "public"
   },

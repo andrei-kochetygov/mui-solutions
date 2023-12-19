@@ -26,6 +26,9 @@ jobs:
       - name: Build Bundle
         run: npm run build
 
+      - name: Build Stories
+        run: npm run stories:build
+
       - name: Publish "@mui-solutions" Bundle
         uses: JS-DevTools/npm-publish@v3
         with:
@@ -36,3 +39,6 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: './packages/inputs/package.json'
+
+      - name: Deploy Stories to GitHub Pages
+        run: npm run stories:deploy
