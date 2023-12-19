@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build Bundle
+			- name: Build Bundle
 				run: npm run build
 
 			- uses: JS-DevTools/npm-publish@v3
