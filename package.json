@@ -1,0 +1,62 @@
+{
+  "name": "mui-solutions",
+  "version": "0.1.0",
+  "author": "Andrei Kochetygov",
+  "license": "MIT",
+  "keywords": [],
+  "type": "module",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "stories:dev": "storybook dev -p 6006",
+    "stories:build": "storybook build"
+  },
+  "dependencies": {
+    "@mui-solutions/inputs": "0.1.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.6.5",
+    "@storybook/addon-interactions": "^7.6.5",
+    "@storybook/addon-links": "^7.6.5",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.5",
+    "@storybook/react": "^7.6.5",
+    "@storybook/react-vite": "^7.6.5",
+    "@storybook/test": "^7.6.5",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "eslint-plugin-storybook": "^0.6.15",
+    "rollup": "^2.79.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-ts": "^3.4.5",
+    "rollup-plugin-tsconfig-paths": "^1.5.2",
+    "storybook": "^7.6.5",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.1",
+    "vite-tsconfig-paths": "^4.2.2"
+  }
+}
