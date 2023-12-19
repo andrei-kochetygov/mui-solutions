@@ -43,7 +43,6 @@ jobs:
       - name: Deploy Stories to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.TOKEN }}
-          repository-name: andrei-kochetygov/mui-solutions
+          ssh-key: ssh-key: ${{ secrets.DEPLOY_KEY }}
           branch: gh-pages
           folder: storybook-static
