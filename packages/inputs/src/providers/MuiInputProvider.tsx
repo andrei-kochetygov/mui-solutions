@@ -1,24 +1,19 @@
-import { OutlinedInput, type InputProps as MuiInputProps } from '@mui/material';
-import { createContext } from 'react';
+import { createProvider } from '@mui-solutions/utils';
+import type { InputProps as MuiInputProps } from '@mui/material';
 
 type MuiInputType<Props> = (props: Props) => JSX.Element;
 
-export const MuiInputContext = createContext<MuiInputType<MuiInputProps> | null>(null);
-
 export type MuiInputProviderProps<InputProps extends MuiInputProps> = {
   MuiInput: MuiInputType<InputProps>;
-  children?: React.ReactNode;
 };
 
-export const MuiInputProvider = <InputProps extends MuiInputProps>({
-  MuiInput,
-  children,
-}: MuiInputProviderProps<InputProps>) => {
-  return (
-    <MuiInputContext.Provider value={MuiInput as MuiInputType<MuiInputProps>}>{children}</MuiInputContext.Provider>
-  );
-};
+export const [MuiInputProvider, useMuiInput, MuiInputContext] = createProvider(
+  'MuiInput',
+  <InputProps extends MuiInputProps>({ MuiInput }: MuiInputProviderProps<InputProps>) => {
+    if (!MuiInput) {
+      throw new Error('Desired MUI Input component must be passed to MuiInputProvider');
+    }
 
-export const Kek = () => {
-  return <MuiInputProvider MuiInput={OutlinedInput}></MuiInputProvider>;
-};
+    return MuiInput;
+  },
+);
