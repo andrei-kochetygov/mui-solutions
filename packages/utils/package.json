@@ -1,0 +1,28 @@
+{
+  "name": "@mui-solutions/utils",
+  "version": "0.1.0",
+  "author": "Andrei Kochetygov",
+  "license": "MIT",
+  "keywords": [],
+  "type": "module",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.esm.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrei-kochetygov/mui-solutions.git",
+    "directory": "packages/utils"
+  },
+  "homepage": "http://andrei-kochetygov.github.io/mui-solutions",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react-dom": "^18.2.0"
+  }
+}

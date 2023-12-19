@@ -11,7 +11,7 @@ const currentWorkingDir = path.dirname(url.fileURLToPath(import.meta.url));
 
 const sources = {
   root: '.',
-  packages: ['inputs'],
+  packages: ['inputs', 'utils'],
 };
 
 const inputs = [...sources.packages.map((pkg) => `${sources.root}/packages/${pkg}`), sources.root];
